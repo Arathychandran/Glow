@@ -5,7 +5,7 @@ app=Flask(__name__)
 
 def index():
 
-    return render_template('index.html')
+    return render_template("index.html")
 @app.route('/new_page', methods=['POST'])
 def new_page():
     # Handle form submission and redirect to new page
