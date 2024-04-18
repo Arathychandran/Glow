@@ -1,14 +1,3 @@
-/**
-* Template Name: Arsha
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -44,7 +33,7 @@ h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #37517e;
+  background: #aec9f8;
 }
 
 #preloader:before {
@@ -81,7 +70,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #47b2e4;
+  background: #539cbd;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -108,6 +97,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
+  background-color: rgb(236, 237, 253, 1);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -115,7 +105,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(40, 58, 90, 0.9);
+  background: rgba(108, 131, 173, 0.9);
 }
 
 #header .logo {
@@ -129,7 +119,7 @@ h6 {
 }
 
 #header .logo a {
-  color: #fff;
+  color: #2f4c72;
 }
 
 #header .logo img {
@@ -166,7 +156,7 @@ h6 {
   padding: 10px 0 10px 30px;
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: #2f4c72;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -192,7 +182,7 @@ h6 {
   border-radius: 50px;
   color: #fff;
   font-size: 14px;
-  border: 2px solid #47b2e4;
+  border: 2px solid #2f4c72;
   font-weight: 600;
 }
 
@@ -387,24 +377,30 @@ h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: #37517e;
+  background: rgb(236, 237, 253, 1);
 }
 
 #hero .container {
-  padding-top: 72px;
+  display:flex;
+  justify-content:space-between;
+  padding: 2px 0 0 50px;
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
+  margin: 0 0 0px 0;
+  font-size: 55px;
+  font-style: italic;
+  font-family:serif;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: #2f4c72;
 }
 
 #hero h2 {
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 50px;
+  color: #2f4c72;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: 100;
   font-size: 24px;
 }
 
@@ -419,7 +415,7 @@ h6 {
   transition: 0.5s;
   margin: 10px 0 0 0;
   color: #fff;
-  background: #47b2e4;
+  background: #3c6283;
 }
 
 #hero .btn-get-started:hover {
@@ -431,8 +427,8 @@ h6 {
   display: flex;
   align-items: center;
   transition: 0.5s;
-  margin: 10px 0 0 25px;
-  color: #fff;
+  margin: 12px 0 0 22px;
+  color: #3c6283;
   line-height: 1;
 }
 
@@ -452,6 +448,16 @@ h6 {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+#hero .hero-img {
+  display: inline-block;
+  text-align:center;
+}
+
+#hero .hero-img img {
+  padding:0 0 100px 400px ;
+  width: 30%;
+}
+
 @media (max-width: 991px) {
   #hero {
     height: 100vh;
@@ -463,11 +469,12 @@ h6 {
   }
 
   #hero .hero-img {
-    text-align: center;
+    text-align:center;
   }
 
   #hero .hero-img img {
-    width: 50%;
+    padding:0 0 0 100px ;
+    width: 30%;
   }
 }
 
@@ -484,13 +491,13 @@ h6 {
   }
 
   #hero .hero-img img {
-    width: 70%;
+    width: 30%;
   }
 }
 
 @media (max-width: 575px) {
   #hero .hero-img img {
-    width: 80%;
+    width: 50%;
   }
 
   #hero .btn-get-started {
@@ -592,6 +599,11 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+
+#about{
+  background-color: rgb(236, 237, 253, 1);
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -616,7 +628,7 @@ section {
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #47b2e4;
+  color:rgb(236, 237, 253, 1);
   line-height: 1;
 }
 
@@ -649,8 +661,12 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
+#why-us{
+  background-color: rgb(236, 237, 253, 1);
+}
+
 .why-us .content {
-  padding: 60px 100px 0 100px;
+  padding: 0 500px 30px 70px;
 }
 
 .why-us .content h3 {
@@ -666,7 +682,7 @@ section {
 }
 
 .why-us .content p {
-  font-size: 15px;
+  font-size: 20px;
   color: #848484;
 }
 
@@ -677,7 +693,7 @@ section {
 }
 
 .why-us .accordion-list {
-  padding: 0 100px 60px 100px;
+  padding: 0 500px 60px 70px;
 }
 
 .why-us .accordion-list ul {
@@ -708,7 +724,7 @@ section {
 }
 
 .why-us .accordion-list span {
-  color: #47b2e4;
+  color: #467fa8;
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
@@ -735,7 +751,7 @@ section {
 }
 
 .why-us .accordion-list a.collapsed:hover {
-  color: #47b2e4;
+  color: #3e8cb0;
 }
 
 .why-us .accordion-list a.collapsed .icon-show {
