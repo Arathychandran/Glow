@@ -30,6 +30,8 @@
 </head>
 <body>
 
+  <div style="background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-117816.jpg?w=740');background-size: cover">
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
@@ -44,14 +46,37 @@
           <li><a class="nav-link scrollto" href="#faq">FAQs</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <form action="{{ url_for('views.new_page') }}" method="POST">
-            <a class="nav-link scrollto" type="submit">Sign In</a>
+            <button class="nav-link scrollto" type="submit">Sign In</button>
           </form>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
+      {% with messages = get_flashed_messages(with_categories=true)%}
+        {% if messages %}
+        {% for category, message in messages %} 
+        {% if category == 'error' %}
+          <div class="alert alert-danger alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% else %}
+          <div class="alert alert-success alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% endif %}
+        {% endfor %} 
+        {% endif %} 
+        {% endwith %}
+
     </div>
   </header><!-- End Header -->
+  
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -66,9 +91,9 @@
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
-        <div class="col-lg-7 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="https://uploads-ssl.webflow.com/607f13242ee5d473017824ba/608412580fc65e8fe07d0966_Group%202005.svg" class="img-fluid animated" style="width:400px;height:400px;" alt="">
-        </div>
+        <!-- <div class="col-lg-7 order-1 order-lg-2 hero-img" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://uploads-ssl.webflow.com/607f13242ee5d473017824ba/608412580fc65e8fe07d0966_Group%202005.svg" class="img-fluid animated" alt="">
+        </div> -->
       </div>
     </div>
 
@@ -108,7 +133,7 @@
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us section-bg">
-      <div class="container-fluid" data-aos="fade-up">
+      <div class="container-fluid" style='background-image: url("https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-117816.jpg?w=740");' data-aos="fade-up">
 
         <div class="row">
 
@@ -155,7 +180,7 @@
 
           </div>
 
-          <div class="col-lg-4 align-items-stretch order-1 order-lg-2 img" style='background-image: url("Glowsite\static\img\why-us.jpg");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-4 align-items-stretch order-1 order-lg-2 img" style='background-image: url("https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-117816.jpg?w=740");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -574,6 +599,7 @@
   <!-- Template Main JS File -->
   <script src="Glowsite\static\js\main.js"></script>
 
+</div>
 </body>
 
 </html>

@@ -1,18 +1,21 @@
-from flask import Blueprint,render_template,redirect,url_for,request
+from flask import Blueprint,render_template,redirect,url_for,request,flash
+from flask_login import login_required, current_user
+from . import db
+from Glowsite.models import User
 
 views = Blueprint('views' , __name__)
 
-@views.route('/')
+@views.route('/', methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
 
 @views.route('/new_page', methods=['POST'])
 def new_page():
     # Handle form submission and redirect to new page
-    return render_template('signin.html')
-def getstarted():
-    if request .method== 'POST':
-       return redirect(url_for('/signin'))
+    return render_template("signin.html")
+# def getstarted():
+#     if request .method== 'POST':
+#        return redirect(url_for('/signin'))
 
 @views.route('/process_signup', methods=['POST'])
 def process_signup():
@@ -20,11 +23,19 @@ def process_signup():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
+
+        new_user = User(name=name, email=email, password=password)
+        db.session.add(new_user)
+        db.session.add(new_user)
+        db.session.commit()
         
-        # Perform any processing with the received data (e.g., store in database)
+        # cursor = db.get_db().cursor()
+        # cursor.execute("INSERT INTO user (name, email, password) VALUES (%s, %s, %s)", (name, email, password))
+        # db.get_db().commit()
+        # cursor.close()
         
         # Redirect to a success page along with the form data
-        return redirect(url_for('signup_success', name=name, email=email))
+        return redirect(url_for('views.signup_success', name=name, email=email))
 
 @views.route('/signup_success')
 def signup_success():
